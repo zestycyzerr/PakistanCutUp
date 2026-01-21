@@ -59,18 +59,18 @@
 }
 
 .logo img{
-  width: 80% !important;
-  height: 80% !important;
+  width: 78% !important;
+  height: 78% !important;
   object-fit: contain !important;
   display: block !important;
 
-  /* kill any weird rendering effects */
+  /* Optical centering (THIS is the key) */
+  transform: translateX(-1px) translateY(0.5px) !important;
+
   border: 0 !important;
   outline: none !important;
   filter: none !important;
   mix-blend-mode: normal !important;
-  -webkit-mask-image: none !important;
-  transform: none !important;
 }
     .logo{
   box-shadow: 0 12px 30px rgba(52,255,106,0.18), 0 12px 40px rgba(0,0,0,0.35) !important;
