@@ -25,6 +25,53 @@
   -->
 
   <style>
+    /* ===== HARD OVERRIDE: Fix logo artifacts/lines ===== */
+.brand { 
+  text-decoration: none !important;
+  border: 0 !important;
+  outline: none !important;
+}
+
+.logo{
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  /* kill line-causing effects */
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* kill overlays that often cause weird strips */
+.logo::before,
+.logo::after{
+  content: none !important;
+  display: none !important;
+}
+
+.logo img{
+  width: 80% !important;
+  height: 80% !important;
+  object-fit: contain !important;
+  display: block !important;
+
+  /* kill any weird rendering effects */
+  border: 0 !important;
+  outline: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  -webkit-mask-image: none !important;
+  transform: none !important;
+}
     :root{
       --bg: #070a07;
       --panel: rgba(255,255,255,0.06);
